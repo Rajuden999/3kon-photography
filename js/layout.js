@@ -1,6 +1,5 @@
 async function loadLayout() {
 
-```
 const headerResponse =
 await fetch("partials/header.html");
 
@@ -34,7 +33,7 @@ if(menuBtn && nav){
 if(typeof loadSettings === "function"){
     loadSettings();
 }
-```
+
 
 }
 
