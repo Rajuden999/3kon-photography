@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | 3Kon Photography</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div id="siteHeader"></div>
+
+<section class="contact-page">
+
+
+<div class="contact-badge">
+    LET'S CREATE MEMORIES
+</div>
+
+<h1>
+    Tell Us About<br>
+    Your Special Day
+</h1>
+
+<div class="contact-divider">
+    ♥
+</div>
+
+<p class="contact-intro">
+    We'd love to hear your story. Share your event details,
+    vision and expectations, and we'll craft a photography
+    experience that's uniquely yours.
+</p>
+
+<form id="contactForm" class="premium-form">
+
+    <div class="form-title">
+        Wedding & Event Inquiry Form
+    </div>
+
+    <label>Name</label>
+    <input type="text" id="name" required>
+
+    <label>Email Address</label>
+    <input type="email" id="email">
+
+    <label>Contact Number</label>
+    <input type="tel" id="phone" required>
+
+    <label>Event Details</label>
+    <textarea id="event"></textarea>
+
+    <label>Location</label>
+    <input type="text" id="location">
+
+    <label>Date / Duration</label>
+    <input type="text" id="date">
+
+    <button type="submit">
+        Send Inquiry
+    </button>
+
+</form>
+
+
+</section>
+
+
+<script>
+
+document.getElementById('contactForm').addEventListener('submit', function(e){
+
+e.preventDefault();
+
+const name = document.getElementById('name').value;
+const email = document.getElementById('email').value;
+const phone = document.getElementById('phone').value;
+const eventDetails = document.getElementById('event').value;
+const location = document.getElementById('location').value;
+const date = document.getElementById('date').value;
+
+const message =
+`Hello 3Kon Photography
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+
+Event Details:
+${eventDetails}
+
+Location:
+${location}
+
+Date / Duration:
+${date}`;
+
+window.open(
+`https://wa.me/919550754442?text=${encodeURIComponent(message)}`,
+'_blank'
+);
+
+});
+
+</script>
+
+<div id="siteFooter"></div>
+<script src="js/settings.js"></script>
+<script src="js/layout.js"></script>
+
+</body>
+</html>
